@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shivangi Kumari | Portfolio</title>
+  <meta name="description"
+    content="Portfolio of Shivangi Kumari - Computer Science Student, Machine Learning Enthusiast, and Problem Solver." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Clash+Display:wght@500;600&display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['Clash Display', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            accent: {
+              50: '#f5f3ff',
+              100: '#ede9fe',
+              500: '#6366f1',
+              600: '#4f46e5',
+              700: '#4338ca',
+            },
+            surface: {
+              light: '#ffffff',
+              dark: '#020617',
+            },
+          },
+          boxShadow: {
+            'soft-xl':
+              '0 24px 60px rgba(15, 23, 42, 0.38), 0 0 0 1px rgba(148, 163, 184, 0.20)',
+          },
+        },
+      },
+      darkMode: 'class',
+    };
+  </script>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body class="bg-slate-50 text-slate-900 transition-colors duration-300 dark:bg-slate-950 dark:text-slate-50">
+  <!-- App Shell -->
+  <div
+    class="min-h-screen bg-gradient-to-b from-slate-50/80 via-slate-50 to-slate-100/70 dark:from-slate-950 dark:via-slate-950/95 dark:to-slate-900/95">
+    <!-- Sticky Nav -->
+    <header
+      class="sticky top-0 z-40 border-b border-slate-200/60 bg-slate-50/80 backdrop-blur-xl dark:border-slate-800/80 dark:bg-slate-950/80">
+      <nav class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
+        <div class="flex items-center gap-2">
+          <div
+            class="flex h-9 w-9 items-center justify-center rounded-2xl bg-gradient-to-br from-accent-500 to-accent-700 text-sm font-semibold text-white shadow-lg shadow-accent-500/40">
+            SK
+          </div>
+          <div class="leading-tight">
+            <p class="font-semibold tracking-tight">Shivangi Kumari</p>
+            <p class="text-xs text-slate-500 dark:text-slate-400">
+              CS Student · ML Enthusiast
+            </p>
+          </div>
+        </div>
+
+        <div class="hidden items-center gap-8 text-sm font-medium md:flex">
+          <a href="#about" class="nav-link">About</a>
+          <a href="#skills" class="nav-link">Skills</a>
+          <a href="#projects" class="nav-link">Projects</a>
+          <a href="#certificates" class="nav-link">Certificates</a>
+          <a href="#achievements" class="nav-link">Achievements</a>
+          <a href="#education" class="nav-link">Education</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <button id="theme-toggle"
+            class="inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-200/80 bg-slate-100/80 text-slate-600 shadow-sm transition hover:border-accent-500 hover:text-accent-500 dark:border-slate-700 dark:bg-slate-900/80 dark:text-slate-300 dark:hover:border-accent-400 dark:hover:text-accent-400"
+            aria-label="Toggle dark mode">
+            <span id="theme-icon" class="text-lg">☾</span>
+          </button>
+
+          <button id="nav-toggle"
+            class="inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-200/80 bg-slate-100/80 text-slate-700 shadow-sm transition hover:border-accent-500 hover:text-accent-500 dark:border-slate-700 dark:bg-slate-900/80 dark:text-slate-200 md:hidden"
+            aria-label="Toggle navigation">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </nav>
+
+      <!-- Mobile nav -->
+      <div id="mobile-nav"
+        class="nav-mobile hidden border-t border-slate-200/80 bg-slate-50/95 px-4 pb-4 pt-2 text-sm font-medium shadow-sm dark:border-slate-800/80 dark:bg-slate-950/95 md:hidden">
+        <div class="flex flex-col gap-2">
+          <a href="#about" class="nav-link block py-1.5">About</a>
+          <a href="#skills" class="nav-link block py-1.5">Skills</a>
+          <a href="#projects" class="nav-link block py-1.5">Projects</a>
+          <a href="#certificates" class="nav-link block py-1.5">Certificates</a>
+          <a href="#achievements" class="nav-link block py-1.5">Achievements</a>
+          <a href="#education" class="nav-link block py-1.5">Education</a>
+          <a href="#contact" class="nav-link block py-1.5">Contact</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="mx-auto max-w-6xl px-4 pb-20 pt-10 md:pt-14">
+      <!-- Hero -->
+      <section id="hero" class="grid gap-10 md:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)] md:items-center">
+        <div class="space-y-6">
+          <div
+            class="inline-flex items-center gap-2 rounded-full border border-accent-500/30 bg-accent-500/5 px-3 py-1 text-xs font-medium text-accent-700 dark:border-accent-400/40 dark:bg-accent-500/10 dark:text-accent-300">
+            <span class="inline-flex h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
+            Open to internships & opportunities
+          </div>
+          <div class="space-y-3">
+            <h1 class="font-display text-4xl tracking-tight text-slate-900 sm:text-5xl md:text-6xl dark:text-slate-50">
+              Shivangi Kumari
+              <span class="block bg-gradient-to-r from-accent-500 to-emerald-400 bg-clip-text text-transparent">
+                ML Enthusiast
+              </span>
+            </h1>
+            <p class="max-w-xl text-sm font-medium uppercase tracking-[0.22em] text-slate-500 dark:text-slate-400">
+              Problem Solver · Curious Mind · Builder of Real-world Solutions
+            </p>
+          </div>
+          <p class="max-w-xl text-sm leading-relaxed text-slate-600 dark:text-slate-300">
+            I am <span class="font-semibold">Shivangi Kumari</span>, a Machine learning engineer with a strong
+            interest in <span class="font-semibold">Machine Learning, Data-driven systems,</span> and
+            <span class="font-semibold">algorithmic problem solving</span>. I enjoy turning complex problems into
+            elegant, scalable solutions and continuously learning new technologies that create real-world impact.
+          </p>
+
+          <div class="flex flex-wrap items-center gap-3">
+            <a href="#projects" class="btn-primary">
+              View Projects
+            </a>
+            <a href="assets/Shivangi-Kumari-Resume.pdf" download class="btn-ghost">
+              Download Resume
+            </a>
+            <a href="#contact"
+              class="inline-flex items-center gap-2 text-sm font-medium text-slate-700 underline-offset-4 hover:text-accent-600 hover:underline dark:text-slate-200 dark:hover:text-accent-400">
+              Contact Me
+            </a>
+          </div>
+
+          <div class="flex flex-wrap gap-4 text-xs text-slate-500 dark:text-slate-400">
+            <div class="flex items-center gap-2">
+              <span
+                class="inline-flex h-6 w-6 items-center justify-center rounded-full bg-slate-100 text-xs dark:bg-slate-900">
+                🤖
+              </span>
+              <span>Machine Learning &amp; AI Projects</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span
+                class="inline-flex h-6 w-6 items-center justify-center rounded-full bg-slate-100 text-xs dark:bg-slate-900">
+                💻
+              </span>
+              <span>Data Structures &amp; Algorithms</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span
+                class="inline-flex h-6 w-6 items-center justify-center rounded-full bg-slate-100 text-xs dark:bg-slate-900">
+                🌱
+              </span>
+              <span>Always Learning &amp; Exploring</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative mx-auto flex max-w-xs items-center justify-center md:max-w-sm">
+          <div
+            class="relative aspect-[4/5] w-full overflow-hidden rounded-3xl border border-slate-200/80 bg-gradient-to-b from-slate-50 via-slate-100 to-slate-200 shadow-soft-xl dark:border-slate-800 dark:from-slate-900 dark:via-slate-900 dark:to-slate-950">
+            <div
+              class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_20%_0,rgba(129,140,248,0.32),transparent_55%),radial-gradient(circle_at_80%_100%,rgba(45,212,191,0.22),transparent_55%)]">
+            </div>
+            <div class="relative flex h-full flex-col items-center justify-center px-7 pb-8 pt-10">
+              <div
+                class="mb-5 h-32 w-32 overflow-hidden rounded-3xl border border-slate-200/80 bg-slate-200 shadow-xl shadow-slate-400/40 ring-4 ring-white/70 dark:border-slate-700 dark:bg-slate-800 dark:shadow-black/50 dark:ring-slate-900/90">
+                <img src="shivangi.jpeg" alt="Portrait of Shivangi Kumari" class="h-full w-full object-cover" />
+              </div>
+              <h2 class="font-display text-xl font-semibold tracking-tight text-slate-900 dark:text-slate-50">
+                Shivangi Kumari
+              </h2>
+              <p class="mt-1 text-xs font-medium uppercase tracking-[0.22em] text-slate-500 dark:text-slate-400">
+                Machine Learning Enthusiast
+              </p>
+              <p class="mt-4 text-sm text-slate-600 dark:text-slate-300">
+                Exploring the intersection of algorithms, data, and intelligent systems to build impactful
+                experiences.
+              </p>
+              <div
+                class="mt-5 flex w-full items-center justify-between gap-3 text-xs text-slate-500 dark:text-slate-400">
+                <div>
+                  <p class="font-semibold text-slate-700 dark:text-slate-200">Primary Stack</p>
+                  <p>Python · ML · C++</p>
+                </div>
+                <div class="text-right">
+                  <p class="font-semibold text-slate-700 dark:text-slate-200">Location</p>
+                  <p>India · Open to remote</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="pointer-events-none absolute -left-6 -top-6 h-20 w-20 rounded-3xl border border-accent-500/30 bg-accent-500/15 backdrop-blur-md dark:border-accent-400/25 dark:bg-accent-500/20">
+          </div>
+          <div
+            class="pointer-events-none absolute -bottom-10 -right-10 h-32 w-32 rounded-full bg-gradient-to-tr from-emerald-400/20 via-accent-500/5 to-transparent blur-2xl">
+          </div>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section id="about" class="section">
+        <div class="section-header">
+          <p class="section-eyebrow">About</p>
+          <h2 class="section-title">A bit about me</h2>
+        </div>
+        <div class="grid gap-10 md:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)]">
+          <div class="space-y-4 text-sm leading-relaxed text-slate-600 dark:text-slate-300">
+            <p>
+              I am a <span class="font-semibold">ML engineer</span> with a deep curiosity for how
+              intelligent systems learn from data. My interests span across
+              <span class="font-semibold">Machine Learning, Artificial Intelligence,</span> and building systems that
+              solve meaningful real-world problems.
+            </p>
+            <p>
+              I work primarily with <span class="font-semibold">Python</span> and have hands-on experience implementing
+              <span class="font-semibold">ML models, data pipelines,</span> and experimentation workflows. A strong
+              foundation in <span class="font-semibold">Data Structures &amp; Algorithms</span> helps me write
+              efficient, optimized solutions.
+            </p>
+            <p>
+              Beyond code, I enjoy <span class="font-semibold">breaking down complex ideas, collaborating</span> with
+              teams, and iterating on feedback. I am constantly learning, experimenting, and looking for opportunities
+              where I can contribute, grow, and build impactful products.
+            </p>
+          </div>
+          <div
+            class="grid gap-3 rounded-2xl border border-slate-200/70 bg-white/70 p-4 text-xs shadow-md shadow-slate-200/70 backdrop-blur-sm dark:border-slate-800 dark:bg-slate-900/80 dark:shadow-black/40">
+            <div class="flex items-start justify-between gap-3">
+              <div>
+                <p class="text-[11px] font-semibold uppercase tracking-[0.24em] text-slate-500 dark:text-slate-400">
+                  Focus Areas
+                </p>
+                <p class="mt-1 text-sm font-medium text-slate-900 dark:text-slate-50">
+                  Machine Learning · Data · Systems
+                </p>
+              </div>
+              <span
+                class="inline-flex items-center rounded-full bg-emerald-500/10 px-2 py-0.5 text-[10px] font-medium text-emerald-500 ring-1 ring-inset ring-emerald-500/30">Actively
+                Learning</span>
+            </div>
+            <div class="grid grid-cols-2 gap-3 text-xs">
+              <div
+                class="rounded-xl border border-slate-200/70 bg-slate-50/80 p-3 dark:border-slate-700 dark:bg-slate-900">
+                <p class="text-[11px] font-semibold uppercase tracking-[0.24em] text-slate-500 dark:text-slate-400">
+                  Strengths
+                </p>
+                <ul class="mt-2 space-y-1 text-slate-600 dark:text-slate-300">
+                  <li>Problem Solving</li>
+                  <li>Analytical Thinking</li>
+                  <li>Writing clean, readable code</li>
+                </ul>
+              </div>
+              <div
+                class="rounded-xl border border-slate-200/70 bg-slate-50/80 p-3 dark:border-slate-700 dark:bg-slate-900">
+                <p class="text-[11px] font-semibold uppercase tracking-[0.24em] text-slate-500 dark:text-slate-400">
+                  Currently Exploring
+                </p>
+                <ul class="mt-2 space-y-1 text-slate-600 dark:text-slate-300">
+                  <li>Deep Learning &amp; NLP</li>
+                  <li>Model Deployment</li>
+                  <li>End-to-end ML systems</li>
+                </ul>
+              </div>
+            </div>
+            <div class="mt-1 flex flex-wrap gap-2 text-[11px]">
+              <span class="pill">Python</span>
+              <span class="pill">Pandas</span>
+              <span class="pill">Scikit-learn</span>
+              <span class="pill">C++</span>
+              <span class="pill">Data Structures</span>
+              <span class="pill">Algorithms</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section id="skills" class="section">
+        <div class="section-header">
+          <p class="section-eyebrow">Skills</p>
+          <h2 class="section-title">What I work with</h2>
+        </div>
+        <div class="grid gap-8 md:grid-cols-2">
+          <!-- Technical Skills -->
+          <div class="card" data-animate="fade-up">
+            <div class="flex items-center justify-between gap-3">
+              <h3 class="card-title">Technical Skills</h3>
+              <span class="badge">Hands-on Experience</span>
+            </div>
+            <div class="mt-5 space-y-4">
+              <div class="skill-row">
+                <div class="flex items-center justify-between">
+                  <span>Python</span>
+                  <span class="skill-level">Advanced</span>
+                </div>
+                <div class="skill-bar">
+                  <div style="--value: 90%"></div>
+                </div>
+              </div>
+              <div class="skill-row">
+                <div class="flex items-center justify-between">
+                  <span>Machine Learning</span>
+                  <span class="skill-level">Intermediate</span>
+                </div>
+                <div class="skill-bar">
+                  <div style="--value: 80%"></div>
+                </div>
+              </div>
+              <div class="skill-row">
+                <div class="flex items-center justify-between">
+                  <span>Data Structures &amp; Algorithms</span>
+                  <span class="skill-level">Strong</span>
+                </div>
+                <div class="skill-bar">
+                  <div style="--value: 85%"></div>
+                </div>
+              </div>
+              <div class="skill-row">
+                <div class="flex items-center justify-between">
+                  <span>C++</span>
+                  <span class="skill-level">Proficient</span>
+                </div>
+                <div class="skill-bar">
+                  <div style="--value: 75%"></div>
+                </div>
+              </div>
+              <div class="grid grid-cols-2 gap-3 pt-1 text-xs text-slate-600 dark:text-slate-300">
+                <div>
+                  <p class="font-semibold text-slate-700 dark:text-slate-200">Web</p>
+                  <p>HTML, CSS, JavaScript</p>
+                </div>
+                <div>
+                  <p class="font-semibold text-slate-700 dark:text-slate-200">Tools</p>
+                  <p>Git, GitHub, Jupyter</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Soft Skills -->
+          <div class="card" data-animate="fade-up" data-animate-delay="100">
+            <div class="flex items-center justify-between gap-3">
+              <h3 class="card-title">Soft Skills</h3>
+              <span class="badge badge-subtle">How I work</span>
+            </div>
+            <div class="mt-5 grid gap-3 sm:grid-cols-2">
+              <div class="soft-skill">
+                <p class="soft-skill-title">Problem Solving</p>
+                <p>Enjoy tackling challenging problems and finding clean, efficient solutions.</p>
+              </div>
+              <div class="soft-skill">
+                <p class="soft-skill-title">Analytical Thinking</p>
+                <p>Comfortable with breaking complex systems into understandable components.</p>
+              </div>
+              <div class="soft-skill">
+                <p class="soft-skill-title">Communication</p>
+                <p>Explain technical concepts clearly to both technical and non-technical audiences.</p>
+              </div>
+              <div class="soft-skill">
+                <p class="soft-skill-title">Teamwork</p>
+                <p>Collaborative, feedback-driven, and supportive in team environments.</p>
+              </div>
+              <div class="soft-skill">
+                <p class="soft-skill-title">Time Management</p>
+                <p>Balance academics, projects, and self-learning through structured planning.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section id="projects" class="section">
+        <div class="section-header">
+          <p class="section-eyebrow">Projects</p>
+          <h2 class="section-title">Selected work</h2>
+        </div>
+        <div class="project-cover" data-animate="fade-up">
+          <div class="project-cover-bg" aria-hidden="true"></div>
+          <div class="project-cover-content">
+            <div class="space-y-3">
+              <p class="project-cover-eyebrow">Portfolio · Build log</p>
+              <h3 class="project-cover-title">
+                Projects that blend <span class="project-cover-gradient">ML</span>, problem solving, and clean UI.
+              </h3>
+              <p class="project-cover-subtitle">
+                A curated set of work focused on practical impact—from data pipelines and models to interactive,
+                user-friendly interfaces.
+              </p>
+            </div>
+            <div class="project-cover-stats">
+              <div class="project-stat">
+                <p class="project-stat-value">4+</p>
+                <p class="project-stat-label">Featured Projects</p>
+              </div>
+              <div class="project-stat">
+                <p class="project-stat-value">ML</p>
+                <p class="project-stat-label">Learning &amp; Experiments</p>
+              </div>
+              <div class="project-stat">
+                <p class="project-stat-value">DSA</p>
+                <p class="project-stat-label">Problem Solving</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="grid gap-6 md:grid-cols-2">
+          <!-- Project Card Template -->
+          <article class="project-card" data-project="ml-weather">
+            <div class="project-image-wrapper">
+              <img src="assets/projects/socialwise.png" alt="SocialWise Banner" class="project-image" />
+              <div class="project-image-overlay"></div>
+            </div>
+            <div class="project-content">
+              <div class="flex items-start justify-between gap-3">
+                <h3 class="project-title">SocialWise</h3>
+                <span class="badge">ML · Time Series</span>
+              </div>
+              <p class="project-description">
+                Built an ML-powered dashboard that predicts short-term weather conditions and visualizes patterns using
+                historical meteorological data.
+              </p>
+              <p class="project-stack">Python · Pandas · Scikit-learn · Matplotlib</p>
+              <div class="project-actions">
+                <a href="https://github.com/Muskanagrawal2005/SocialWise" target="_blank" rel="noopener noreferrer"
+                  class="btn-pill btn-pill-ghost" aria-label="GitHub repository">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-project="student-performance">
+            <div class="project-image-wrapper">
+              <img src="assets/projects/deadlock.png" alt="Deadlock Banner" class="project-image" />
+              <div class="project-image-overlay"></div>
+            </div>
+            <div class="project-content">
+              <div class="flex items-start justify-between gap-3">
+                <h3 class="project-title">Deadlock</h3>
+                <span class="badge">Classification · Analytics</span>
+              </div>
+              <p class="project-description">
+                Predicts student outcomes based on academic and behavioral data, helping educators take early
+                interventions.
+              </p>
+              <p class="project-stack">Python · Scikit-learn · Seaborn · Jupyter</p>
+              <div class="project-actions">
+                <a href="https://github.com/aadarshthe/Deadlock" target="_blank" rel="noopener noreferrer"
+                  class="btn-pill btn-pill-ghost" aria-label="GitHub repository">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-project="portfolio-site">
+            <div class="project-image-wrapper">
+              <img src="assets/projects/ai_email.png" alt="AI Email Composer Banner" class="project-image" />
+              <div class="project-image-overlay"></div>
+            </div>
+            <div class="project-content">
+              <div class="flex items-start justify-between gap-3">
+                <h3 class="project-title">AI Email Composer</h3>
+                <span class="badge">Frontend · UI</span>
+              </div>
+              <p class="project-description">
+                A modern, responsive portfolio that highlights skills, projects, and achievements with smooth
+                animations and dark mode.
+              </p>
+              <p class="project-stack">HTML · CSS · JavaScript</p>
+              <div class="project-actions">
+                <a href="https://github.com/Latika099/AI-Email-Composer-FullStack" target="_blank"
+                  rel="noopener noreferrer" class="btn-pill btn-pill-ghost">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-project="dsa-visualizer">
+            <div class="project-image-wrapper">
+              <img src="assets/projects/portfolio.png" alt="Portfolio Website Banner" class="project-image" />
+              <div class="project-image-overlay"></div>
+            </div>
+            <div class="project-content">
+              <div class="flex items-start justify-between gap-3">
+                <h3 class="project-title">Portfolio Website</h3>
+                <span class="badge">Algorithms · Education</span>
+              </div>
+              <p class="project-description">
+                Visualizes core data structures and algorithms, helping learners understand how operations work step
+                by step.
+              </p>
+              <p class="project-stack">JavaScript · HTML5 Canvas</p>
+              <div class="project-actions">
+                <a href="https://github.com/Shivangiiiiii-24/Portfolio" target="_blank" rel="noopener noreferrer"
+                  class="btn-pill btn-pill-ghost">GitHub</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Certificates -->
+      <section id="certificates" class="section">
+        <div class="section-header">
+          <p class="section-eyebrow">Certificates</p>
+          <h2 class="section-title">Certifications &amp; Courses</h2>
+        </div>
+        <div class="grid gap-6 md:grid-cols-3">
+          <article class="certificate-card" data-certificate="coursera-bit-bytes">
+            <div class="certificate-image-wrapper border-b border-slate-200/50 dark:border-slate-800/50">
+              <img src="assets/certificates/coursera-bit-bytes.png"
+                alt="The Bits and Bytes of Computer Networking Certificate" class="certificate-image" />
+            </div>
+            <div class="certificate-content">
+              <h3 class="certificate-title">The Bits and Bytes of Computer Networking</h3>
+              <p class="certificate-org">Coursera</p>
+              <a href="Coursera%20bit%20bytes.pdf" target="_blank" class="btn-link mt-2 text-xs inline-block">
+                View Certificate
+              </a>
+            </div>
+          </article>
+
+          <article class="certificate-card" data-certificate="coursera-tcp-ip">
+            <div class="certificate-image-wrapper border-b border-slate-200/50 dark:border-slate-800/50">
+              <img src="assets/certificates/coursera-tcp-ip.png" alt="Coursera TCP/IP Certificate"
+                class="certificate-image" />
+            </div>
+            <div class="certificate-content">
+              <h3 class="certificate-title">Coursera TCP/IP</h3>
+              <p class="certificate-org">Coursera</p>
+              <a href="file:///C:/Users/SHIVANGI/Desktop/certificates/Coursera%20tcp%20ip.pdf" target="_blank"
+                class="btn-link mt-2 text-xs inline-block">
+                View Certificate
+              </a>
+            </div>
+          </article>
+
+          <article class="certificate-card" data-certificate="dsa-certificate">
+            <div class="certificate-image-wrapper border-b border-slate-200/50 dark:border-slate-800/50">
+              <img src="assets/certificates/dsa-certificate.png" alt="Data Structure and Algorithm Certificate"
+                class="certificate-image" />
+            </div>
+            <div class="certificate-content">
+              <h3 class="certificate-title">Data Structure and Algorithm</h3>
+              <p class="certificate-org">Certification</p>
+              <a href="file:///C:/Users/SHIVANGI/Downloads/https___s3.amazonaws.com_exams-media_2027_StudentS%20certificate%20for%20CSE205_12310405@neocolab.ai%20(6).pdf"
+                target="_blank" class="btn-link mt-2 text-xs inline-block">
+                View Certificate
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Achievements -->
+      <section id="achievements" class="section">
+        <div class="section-header">
+          <p class="section-eyebrow">Achievements</p>
+          <h2 class="section-title">Milestones &amp; highlights</h2>
+        </div>
+        <div class="relative border-l border-slate-200/80 pl-6 dark:border-slate-800">
+          <div class="absolute -left-1 top-0 h-2 w-2 rounded-full bg-accent-500"></div>
+          <div class="space-y-7">
+            <div class="timeline-item">
+              <p class="timeline-year">2025</p>
+              <h3 class="timeline-title">Top performance in ML-focused Hackathon</h3>
+              <p class="timeline-description">
+                Built an end-to-end ML solution with a team to solve a real-world data challenge, focusing on model
+                performance and interpretability.
+              </p>
+              <p class="timeline-tag">Hackathons · Collaboration</p>
+            </div>
+            <div class="timeline-item">
+              <p class="timeline-year">2024</p>
+              <h3 class="timeline-title">Competitive Programming &amp; DSA Practice</h3>
+              <p class="timeline-description">
+                Participated in coding contests and consistently practiced DSA problems across multiple platforms to
+                strengthen problem-solving ability.
+              </p>
+              <p class="timeline-tag">Coding Competitions · DSA</p>
+            </div>
+            <div class="timeline-item">
+              <p class="timeline-year">2024</p>
+              <h3 class="timeline-title">Completed Multiple Online ML Certifications</h3>
+              <p class="timeline-description">
+                Finished structured courses on machine learning, Python, and data analysis, applying concepts in
+                hands-on projects.
+              </p>
+              <p class="timeline-tag">Certifications · Self-learning</p>
+            </div>
+            <div class="timeline-item">
+              <p class="timeline-year">2023</p>
+              <h3 class="timeline-title">Strong Academic Performance in CS Core</h3>
+              <p class="timeline-description">
+                Performed well in core CS subjects like Data Structures, Algorithms, Database Systems, and Operating
+                Systems.
+              </p>
+              <p class="timeline-tag">Academics · Foundations</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Education -->
+      <section id="education" class="section">
+        <div class="section-header">
+          <p class="section-eyebrow">Education</p>
+          <h2 class="section-title">Educational journey</h2>
+        </div>
+        <div class="grid gap-8 md:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)]">
+          <div class="relative border-l border-slate-200/80 pl-6 dark:border-slate-800">
+            <div class="absolute -left-1 top-0 h-2 w-2 rounded-full bg-accent-500"></div>
+            <div class="space-y-7">
+              <div class="timeline-item edu-card edu-current">
+                <div class="flex flex-wrap items-start justify-between gap-3">
+                  <div>
+                    <p class="timeline-year">Aug 2023 – Present</p>
+                    <div class="flex items-center gap-2">
+                      <span class="edu-icon" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                          <path
+                            d="M12 3 1.5 8.25 12 13.5l8.25-4.125V16.5h1.5V8.25L12 3Zm-6.75 8.4V16.2c0 .78.39 1.5 1.05 1.92C7.68 19.02 9.72 20.25 12 20.25c2.28 0 4.32-1.23 5.7-2.13.66-.42 1.05-1.14 1.05-1.92V11.4L12 14.7l-6.75-3.3Z" />
+                        </svg>
+                      </span>
+                      <h3 class="timeline-title">Lovely Professional University</h3>
+                    </div>
+                    <p class="edu-location">Jalandhar, Punjab</p>
+                  </div>
+                  <div class="edu-badges">
+                    <span class="edu-present">Present</span>
+                    <span class="edu-pill">B.Tech (CSE)</span>
+                    <span class="edu-pill edu-pill-strong">CGPA 6.99</span>
+                  </div>
+                </div>
+                <div class="edu-meta">
+                  <div>
+                    <p class="edu-meta-label">Qualification</p>
+                    <p class="edu-meta-value">Bachelor of Technology (Computer Science and Engineering)</p>
+                  </div>
+                  <div>
+                    <p class="edu-meta-label">Score</p>
+                    <p class="edu-meta-value">CGPA: 6.99</p>
+                  </div>
+                  <div class="md:col-span-2">
+                    <p class="edu-meta-label">Duration</p>
+                    <p class="edu-meta-value">Aug 2023 – Present</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="timeline-item edu-card">
+                <div class="flex flex-wrap items-start justify-between gap-3">
+                  <div>
+                    <p class="timeline-year">Apr 2021 – Mar 2023</p>
+                    <div class="flex items-center gap-2">
+                      <span class="edu-icon" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                          <path
+                            d="M4.5 3.75A2.25 2.25 0 0 0 2.25 6v14.25h19.5V6A2.25 2.25 0 0 0 19.5 3.75h-15ZM6 8.25h6.75v1.5H6v-1.5Zm0 3h11.25v1.5H6v-1.5Zm0 3h11.25v1.5H6v-1.5Z" />
+                        </svg>
+                      </span>
+                      <h3 class="timeline-title">Children’s Academy</h3>
+                    </div>
+                    <p class="edu-location">Jaipur, Rajasthan</p>
+                  </div>
+                  <div class="edu-badges">
+                    <span class="edu-pill">Intermediate</span>
+                    <span class="edu-pill edu-pill-strong">79%</span>
+                  </div>
+                </div>
+                <div class="edu-meta">
+                  <div>
+                    <p class="edu-meta-label">Qualification</p>
+                    <p class="edu-meta-value">Intermediate</p>
+                  </div>
+                  <div>
+                    <p class="edu-meta-label">Score</p>
+                    <p class="edu-meta-value">Percentage: 79%</p>
+                  </div>
+                  <div class="md:col-span-2">
+                    <p class="edu-meta-label">Duration</p>
+                    <p class="edu-meta-value">Apr 2021 – Mar 2023</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="timeline-item edu-card">
+                <div class="flex flex-wrap items-start justify-between gap-3">
+                  <div>
+                    <p class="timeline-year">Apr 2019 – Mar 2021</p>
+                    <div class="flex items-center gap-2">
+                      <span class="edu-icon" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                          <path
+                            d="M4.5 3.75A2.25 2.25 0 0 0 2.25 6v14.25h19.5V6A2.25 2.25 0 0 0 19.5 3.75h-15ZM6 8.25h6.75v1.5H6v-1.5Zm0 3h11.25v1.5H6v-1.5Zm0 3h11.25v1.5H6v-1.5Z" />
+                        </svg>
+                      </span>
+                      <h3 class="timeline-title">Children’s Academy</h3>
+                    </div>
+                    <p class="edu-location">Jaipur, Rajasthan</p>
+                  </div>
+                  <div class="edu-badges">
+                    <span class="edu-pill">Matriculation</span>
+                    <span class="edu-pill edu-pill-strong">84%</span>
+                  </div>
+                </div>
+                <div class="edu-meta">
+                  <div>
+                    <p class="edu-meta-label">Qualification</p>
+                    <p class="edu-meta-value">Matriculation</p>
+                  </div>
+                  <div>
+                    <p class="edu-meta-label">Score</p>
+                    <p class="edu-meta-value">Percentage: 84%</p>
+                  </div>
+                  <div class="md:col-span-2">
+                    <p class="edu-meta-label">Duration</p>
+                    <p class="edu-meta-value">Apr 2019 – Mar 2021</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card" data-animate="fade-up">
+            <h3 class="card-title">Highlights</h3>
+            <ul class="mt-4 space-y-3 text-sm text-slate-600 dark:text-slate-300">
+              <li>Strong academic foundation with consistent performance.</li>
+              <li>Developed early interest in computing, math, and analytical thinking.</li>
+              <li>Built a disciplined study routine and time management skills.</li>
+              <li>Prepared for higher studies by strengthening core fundamentals.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="section">
+        <div class="section-header">
+          <p class="section-eyebrow">Contact</p>
+          <h2 class="section-title">Let’s build something together</h2>
+        </div>
+        <div class="grid gap-10 md:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)]">
+          <form class="card space-y-5" onsubmit="event.preventDefault();">
+            <div class="grid gap-4 md:grid-cols-2">
+              <div>
+                <label class="form-label" for="name">Name</label>
+                <input id="name" type="text" placeholder="Your name" class="form-input" required />
+              </div>
+              <div>
+                <label class="form-label" for="email">Email</label>
+                <input id="email" type="email" placeholder="you@example.com" class="form-input" required />
+              </div>
+            </div>
+            <div>
+              <label class="form-label" for="message">Message</label>
+              <textarea id="message" rows="4" placeholder="Tell me about the opportunity or project..."
+                class="form-input resize-none" required></textarea>
+            </div>
+            <button type="submit" class="btn-primary w-full md:w-auto">Send Message</button>
+            <p class="text-xs text-slate-500 dark:text-slate-400">
+              The form is currently for demo purposes. Feel free to reach out directly via email or LinkedIn.
+            </p>
+          </form>
+
+          <div class="space-y-6">
+            <div class="card space-y-4">
+              <h3 class="card-title">Contact Details</h3>
+              <div class="space-y-3 text-sm text-slate-600 dark:text-slate-300">
+                <div class="flex items-center gap-3">
+                  <span class="contact-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none">
+                      <path d="M21 8.25v7.5A2.25 2.25 0 0 1 18.75 18H5.25A2.25 2.25 0 0 1 3 15.75v-7.5"
+                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                      <path
+                        d="M21 8.25v-.75A2.25 2.25 0 0 0 18.75 5.25H5.25A2.25 2.25 0 0 0 3 7.5v.75l8.219 4.567a2.25 2.25 0 0 0 2.162 0L21 8.25Z"
+                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </span>
+                  <div>
+                    <p class="text-xs font-medium uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400">
+                      Email
+                    </p>
+                    <a href="mailto:shivangi.mar.24@gmail.com"
+                      class="text-sm font-medium text-slate-900 hover:text-accent-600 dark:text-slate-50 dark:hover:text-accent-400">shivangi.mar.24@gmail.com</a>
+                  </div>
+                </div>
+                <div class="flex items-center gap-3">
+                  <span class="contact-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none">
+                      <path d="M16 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z" stroke="currentColor" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M6 20a6 6 0 0 1 12 0" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg>
+                  </span>
+                  <div>
+                    <p class="text-xs font-medium uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400">
+                      Location
+                    </p>
+                    <p class="text-sm font-medium text-slate-900 dark:text-slate-50">India · IST (GMT+5:30)</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card space-y-4">
+              <h3 class="card-title">Find me online</h3>
+              <div class="flex flex-wrap gap-3">
+                <a href="https://www.linkedin.com/in/shivangi-kumari-24-/" target="_blank" rel="noreferrer"
+                  class="social-link">
+                  <span class="social-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="currentColor">
+                      <path
+                        d="M4.983 3.5C4.983 4.604 4.1 5.5 3 5.5 1.9 5.5 1 4.604 1 3.5 1 2.395 1.9 1.5 3 1.5c1.1 0 1.983.895 1.983 2Zm.017 3H1.02V21h3.98V6.5ZM8.982 6.5H5.02V21h3.962v-7.5c0-1.982.377-3.905 2.834-3.905 2.42 0 2.456 2.266 2.456 4.03V21h3.96v-8.268C18.232 8.24 16.592 6 13.523 6c-1.64 0-3.013.805-3.54 1.747h-.04V6.5Z" />
+                    </svg>
+                  </span>
+                  LinkedIn
+                </a>
+                <a href="https://github.com/Shivangiiiiii-24" target="_blank" rel="noreferrer" class="social-link">
+                  <span class="social-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="currentColor">
+                      <path fill-rule="evenodd"
+                        d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.155-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.003.071 1.531 1.032 1.531 1.032.892 1.531 2.341 1.089 2.91.833.091-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.56 9.56 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.918.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.523 2 12 2Z" />
+                    </svg>
+                  </span>
+                  GitHub
+                </a>
+                <a href="#" class="social-link">
+                  <span class="social-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none">
+                      <path
+                        d="M9.75 3h4.5A3.75 3.75 0 0 1 18 6.75v10.5A3.75 3.75 0 0 1 14.25 21h-4.5A3.75 3.75 0 0 1 6 17.25V6.75A3.75 3.75 0 0 1 9.75 3Z"
+                        stroke="currentColor" stroke-width="1.5" />
+                      <path
+                        d="M9.75 3.75h4.5A3 3 0 0 1 17.25 6.75v10.5A3 3 0 0 1 14.25 20.25h-4.5A3 3 0 0 1 6.75 17.25V6.75A3 3 0 0 1 9.75 3.75Z"
+                        fill="currentColor" fill-opacity="0.05" />
+                    </svg>
+                  </span>
+                  Portfolio (this site)
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-slate-200/70 px-4 py-6 text-center text-xs text-slate-500 dark:border-slate-800">
+      <p>
+        © <span id="year"></span> Shivangi Kumari. Crafted with curiosity, code, and coffee.
+      </p>
+    </footer>
+  </div>
+
+  <!-- Project Detail Modal -->
+  <div id="project-modal" class="modal hidden" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-backdrop" data-modal-close></div>
+    <div class="modal-panel" role="document">
+      <button class="modal-close" aria-label="Close project details" data-modal-close>
+        ✕
+      </button>
+      <div id="project-modal-content" class="space-y-4 text-sm text-slate-600 dark:text-slate-300"></div>
+    </div>
+  </div>
+
+  <!-- Certificate Detail Modal -->
+  <div id="certificate-modal" class="modal hidden" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-backdrop" data-modal-close></div>
+    <div class="modal-panel modal-panel-sm" role="document">
+      <button class="modal-close" aria-label="Close certificate" data-modal-close>
+        ✕
+      </button>
+      <div id="certificate-modal-content" class="space-y-4 text-sm text-slate-600 dark:text-slate-300"></div>
+    </div>
+  </div>
+
+  <script src="./script.js" defer></script>
+</body>
+
+</html>
